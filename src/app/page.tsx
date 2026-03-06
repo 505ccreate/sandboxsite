@@ -1,10 +1,12 @@
 import Hero from '@/components/Hero';
 import Auth from '@/components/Auth';
 import FeatureGrid from '@/components/FeatureGrid';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-nexus-black selection:bg-accent-cyan/30 selection:text-accent-cyan">
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)] selection:bg-accent-cyan/30 selection:text-accent-cyan">
+      <ThemeToggle />
       <Hero />
       <div id="auth">
         <Auth />
@@ -12,8 +14,8 @@ export default function Home() {
       <FeatureGrid />
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t border-white/5 text-center bg-nexus-black">
-        <p suppressHydrationWarning className="text-white/30 text-xs tracking-widest uppercase">
+      <footer className="py-12 px-4 border-t border-black/5 dark:border-white/5 text-center bg-[var(--background)]">
+        <p suppressHydrationWarning className="text-[var(--foreground)]/30 text-xs tracking-widest uppercase">
           &copy; {new Date().getFullYear()} THE NEXUS PORTAL. ALL RIGHTS RESERVED.
         </p>
       </footer>
